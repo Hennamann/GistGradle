@@ -53,7 +53,7 @@ editGist {
 	gitUser = "github username"
 	gitPass = "github password"
     gistID = "12345"
-	gistContent = "Contents of the file you are creating"
+	gistContent = "Contents of the file you are editing"
 	gistFileName = "filename.txt" 
 }
 ```
