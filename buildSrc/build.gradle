@@ -1,3 +1,16 @@
+plugins {
+    id 'com.gradle.plugin-publish' version '0.9.7'
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+}
+
 apply plugin: 'java'
 apply plugin: 'java-gradle-plugin'
 apply plugin: 'maven-publish'
@@ -26,13 +39,39 @@ gradlePlugin {
     }
 }
 
+pluginBundle {
+    website = 'https://confluence.henrikstabell.com/display/GIS'
+    vcsUrl = 'https://github.com/Hennamann/GistGradle'
+
+    plugins {
+        greetingsPlugin {
+            id = 'com.henrikstabell.gistgradle'
+            displayName = 'GistGradle'
+            description = 'Gradle plugin for creating and editing GitHub gists using your buildscripts'
+            tags = ['gist', 'file', 'api', 'automation']
+            version = project.version
+        }
+    }
+}
+
 publishing {
+    tasks.publish.dependsOn 'build'
     publications {
-        pluginPublication (MavenPublication) {
-            from    components.java
-            groupId    project.group
-            artifactId    archivesBaseName
-            version    project.version
+        mavenJava(MavenPublication) {
+            groupId project.group
+            artifactId archivesBaseName
+            version project.version
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            credentials {
+                username System.getenv('userMaven')
+                password System.getenv('passMaven')
+            }
+            url System.getenv('urlMaven')
         }
     }
 }

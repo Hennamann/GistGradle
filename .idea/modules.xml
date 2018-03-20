@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc_main.iml" group="buildSrc" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc_test.iml" group="buildSrc" />
       <module fileurl="file://$PROJECT_DIR$/gistgradle.iml" filepath="$PROJECT_DIR$/gistgradle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gistgradle_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gistgradle_main.iml" group="gistgradle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gistgradle_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gistgradle_test.iml" group="gistgradle" />
     </modules>
   </component>
 </project>
