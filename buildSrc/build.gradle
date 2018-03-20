@@ -1,0 +1,38 @@
+apply plugin: 'java'
+apply plugin: 'java-gradle-plugin'
+apply plugin: 'maven-publish'
+
+group = 'com.henrikstabell.gistgradle'
+version = '1.0-SNAPSHOT'
+archivesBaseName = 'gistgradle'
+targetCompatibility = '1.8'
+sourceCompatibility = '1.8'
+
+dependencies {
+    compile gradleApi()
+
+    compile 'org.eclipse.mylyn.github:org.eclipse.egit.github.core:2.1.5'
+    compile 'com.google.guava:guava:23.0'
+
+    // testCompile 'junit:junit:4.12' Not used yet
+}
+
+gradlePlugin {
+    plugins {
+        GistGradle {
+            id = 'com.henrikstabell.gistgradle'
+            implementationClass = 'com.henrikstabell.gistgradle.GistGradlePlugin'
+        }
+    }
+}
+
+publishing {
+    publications {
+        pluginPublication (MavenPublication) {
+            from    components.java
+            groupId    project.group
+            artifactId    archivesBaseName
+            version    project.version
+        }
+    }
+}
