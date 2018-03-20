@@ -44,7 +44,7 @@ pluginBundle {
     vcsUrl = 'https://github.com/Hennamann/GistGradle'
 
     plugins {
-        greetingsPlugin {
+        GistGradle {
             id = 'com.henrikstabell.gistgradle'
             displayName = 'GistGradle'
             description = 'Gradle plugin for creating and editing GitHub gists using your buildscripts'
