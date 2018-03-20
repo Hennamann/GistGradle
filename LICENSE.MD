@@ -1,7 +1,7 @@
 European Union Public Licence
 V. 1.2
 
-Copyright (c) 2017 - Present Ole Henrik Stabell
+Copyright (c) 2018 - Present Ole Henrik Stabell
 
 EUPL © the European Union 2007, 2016
 
