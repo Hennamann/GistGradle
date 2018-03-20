@@ -22,6 +22,7 @@ createGist {
 	gitPass = "github password"
 	gistContent = "Contents of the file you are creating"
 	gistFileName = "filename.txt" 
+	gistDescription = "description for the gist"
 	gistStatus = true
 }
 ```
